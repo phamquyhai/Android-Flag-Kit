@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cfcfcf"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.haipq.android.flagkit.example.MainActivity">
+
+    <com.haipq.android.flagkit.FlagImageView
+        android:id="@+id/flagView"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        app:countryCode="US"
+        tools:src="@drawable/flag_us" />
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Default Local"
+        android:onClick="currentFlag"
+        />
+
+</LinearLayout>
