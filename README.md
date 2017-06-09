@@ -7,7 +7,7 @@ Free Resource from https://dribbble.com/shots/2828120-All-Flags-Freebie-Flag-Kit
 
 Add it in your root build.gradle at the end of repositories:
 
-```
+```groovy
 	allprojects {
 		repositories {
 			...
@@ -18,9 +18,35 @@ Add it in your root build.gradle at the end of repositories:
 
 #### Step 2. Add the dependency
 
-```
-dependencies {
+```groovy
+	dependencies {
 	        compile 'com.github.KaKaVip:Android-Flag-Kit:v0.1'
 	}
+```
+
+#### Step 3. Using
+
+in XML
+
+```xml
+<com.haipq.android.flagkit.FlagImageView
+        android:id="@+id/flagView"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        app:countryCode="US"
+        tools:src="@drawable/flag_us" />  // To Show in Preview
+```
+
+in Java Code
+
+```
+FlagImageView flagImageView = (FlagImageView) findViewById(R.id.flagView);
+
+flagImageView.setCountryCode("VN"); // with text code
+
+flagImageView.setCountryCode(Locale.CANADA); //  with Locale
+
+flagImageView.defaultLocal(); // Show current device
+
 ```
 
